@@ -108,3 +108,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+
+
+### All my Dependences
+
+## Install Fastfy
+
+```bash
+$ npm i --save @nestjs/platform-fastify 
+```
+Last this make the configuration to main.ts
