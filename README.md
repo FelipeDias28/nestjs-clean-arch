@@ -115,6 +115,24 @@ Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
 ## Install Fastfy
 
 ```bash
-$ npm i --save @nestjs/platform-fastify 
+$ npm i --save @nestjs/platform-fastify
 ```
 Last this make the configuration to main.ts
+
+## Install Config
+
+```bash
+$ npm i @nestjs/config
+```
+
+## Create Module By CLI
+
+```bash
+$ nest g module shared/infrastructure/env-config
+```
+
+## Create Service By CLI
+
+```bash
+$ nest g service shared/infrastructure/env-config
+```
