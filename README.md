@@ -136,3 +136,9 @@ $ nest g module shared/infrastructure/env-config
 ```bash
 $ nest g service shared/infrastructure/env-config
 ```
+
+## Create resource (many files)
+
+```bash
+$  nest g resource users
+```
