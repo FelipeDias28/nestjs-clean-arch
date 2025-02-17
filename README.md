@@ -142,3 +142,9 @@ $ nest g service shared/infrastructure/env-config
 ```bash
 $  nest g resource users
 ```
+
+## Install Faker
+Lib to create faker infos
+```bash
+$  npm i -D @faker-js/faker
+```
