@@ -148,3 +148,12 @@ Lib to create faker infos
 ```bash
 $  npm i -D @faker-js/faker
 ```
+
+## Install Uuid
+Crate hashed id
+```bash
+$  npm install uuid
+```
+```bash
+$  npm install -D @types/uuid
+```

@@ -1,5 +1,7 @@
 // Regras cruciais de negócio, razão de ser do software
 
+import { Entity } from '@/shared/domain/entities/entity'
+
 export type UserProps = {
   name: string
   email: string
@@ -7,8 +9,12 @@ export type UserProps = {
   createdAt?: Date // Ao criar um usuário a pessoa não precisa informar a data de criação, ela será preenchida automaticamente
 }
 
-export class UserEntity {
-  constructor(public readonly props: UserProps) {
+export class UserEntity extends Entity<UserProps> {
+  constructor(
+    public readonly props: UserProps,
+    id?: string,
+  ) {
+    super(props, id)
     this.props.createdAt = this.props.createdAt ?? new Date()
   }
 
