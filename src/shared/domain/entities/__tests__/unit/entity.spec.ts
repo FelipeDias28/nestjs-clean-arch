@@ -1,6 +1,5 @@
 import { validate as uuidValidate } from 'uuid'
 import { Entity } from '../../entity'
-import exp from 'constants'
 
 // Passando qualquer valor para simular
 type StubProps = {
