@@ -157,3 +157,8 @@ $  npm install uuid
 ```bash
 $  npm install -D @types/uuid
 ```
+
+## Install Class Validator
+```bash
+$  npm i class-validator
+```
