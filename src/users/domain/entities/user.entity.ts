@@ -1,6 +1,7 @@
 // Regras cruciais de negócio, razão de ser do software
 
 import { Entity } from '@/shared/domain/entities/entity'
+import { UserValidatorfactory } from '../validators/user.validator'
 
 export type UserProps = {
   name: string
@@ -14,15 +15,18 @@ export class UserEntity extends Entity<UserProps> {
     public readonly props: UserProps,
     id?: string,
   ) {
+    UserEntity.validate(props)
     super(props, id)
     this.props.createdAt = this.props.createdAt ?? new Date()
   }
 
   update(value: string): void {
+    UserEntity.validate({ ...this.props, name: value }) // Valida as propriedades da instância e altera nome
     this.name = value
   }
 
   updatePassword(value: string): void {
+    UserEntity.validate({ ...this.props, password: value })
     this.password = value
   }
 
@@ -48,5 +52,10 @@ export class UserEntity extends Entity<UserProps> {
 
   get createdAt() {
     return this.props.createdAt
+  }
+
+  static validate(props: UserProps) {
+    const validator = UserValidatorfactory.create()
+    validator.validate(props)
   }
 }
